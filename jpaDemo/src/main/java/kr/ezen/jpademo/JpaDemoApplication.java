@@ -12,7 +12,9 @@ import org.springframework.context.annotation.ComponentScan;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
+import javax.persistence.TypedQuery;
 import java.util.Date;
+import java.util.List;
 
 @SpringBootApplication
 
@@ -98,5 +100,9 @@ public class JpaDemoApplication implements CommandLineRunner {
         tx.begin();
         em.remove(user); // em에서 user엔티티 삭제(em에 반영)
         tx.commit(); // db에 반영
-        }
+
+    }
+
+
+
     }
